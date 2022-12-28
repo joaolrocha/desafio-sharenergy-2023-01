@@ -1,9 +1,9 @@
 import React from "react";
-import UserLoguin from "../../components/UserLoguin";
+import UserLogin from "../../components/UserLogin";
 
 function Home () {
   return(
-    <UserLoguin/>
+    <UserLogin/>
   )
 }
 

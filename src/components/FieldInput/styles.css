@@ -1,0 +1,11 @@
+.input-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container > label{
+  margin-bottom: 8px;
+}
+
+
+/* https://getbem.com/introduction/ */
