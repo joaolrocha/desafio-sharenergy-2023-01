@@ -7,8 +7,8 @@ interface ButtonProps {
 
 function ButtonHome({ isActive, clicked }: ButtonProps) {
   return (
-    
-    <Button variant="contained">Get User</Button>
+
+    <Button onClick={clicked} variant="contained">{isActive ? "Get another user" : "Get User"}</Button>
   )
 }
 
