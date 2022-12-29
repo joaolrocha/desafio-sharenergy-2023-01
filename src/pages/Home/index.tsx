@@ -1,9 +1,8 @@
-import React from "react";
-import UserLogin from "../../components/UserLogin";
+import ListRandom from "../../components/ListRandom"
 
-function Home () {
-  return(
-    <UserLogin/>
+function Home() {
+  return (
+    <ListRandom />
   )
 }
 
