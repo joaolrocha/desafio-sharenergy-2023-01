@@ -5,6 +5,8 @@
 
 .input-container > label{
   margin-bottom: 8px;
+  font-size: 1.25rem;
+  text-transform: capitalize;
 }
 
 

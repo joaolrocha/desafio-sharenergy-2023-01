@@ -1,13 +1,11 @@
-import TextField from '@mui/material/TextField';
+import TextField,{TextFieldProps} from '@mui/material/TextField';
 import './styles.css'
-interface InputProps{
-  label?:string
-}
-function FieldInput({label}: InputProps) {
+
+function FieldInput({label, ...props}: TextFieldProps) {
   return (
     <div className="input-container">
       {label? <label>{label}</label> : null}
-      <TextField required id="outline-required" placeholder={label} variant="filled" />
+      <TextField required id="outline"  hiddenLabel variant="filled" {...props} />
     </div>
   )
 }
