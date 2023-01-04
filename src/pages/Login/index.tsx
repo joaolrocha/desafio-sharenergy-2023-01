@@ -3,6 +3,10 @@ import { Button, Card, CardContent, CardHeader, Checkbox, FormControlLabel, Form
 import FieldInput from '../../components/FieldInput';
 import './styles.css';
 
+
+// Note: Verificar Logo Size;
+// Note: Verificar Icon Button;
+
 function LoginPage() {
   return (
     <div className="home-container">
