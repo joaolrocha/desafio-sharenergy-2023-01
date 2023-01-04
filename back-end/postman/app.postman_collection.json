@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "920ce45a-a1a6-43a1-9842-40bd7217b86d",
+		"name": "teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11075848"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"desafiosharenergy\",\n    \"password\":\"sh@r3n3rgy\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3334/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3334",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4YWQ3NTllLTViOTUtNDlmMS1iYTEwLTNmNDdjOWYxOGVkNyIsImlhdCI6MTY3MjI0MjcxMSwiZXhwIjoxNjcyODQ3NTExfQ.-uIBsQlgiGEHBlrLk1l4Ow4RafnHXmdOli_ElKTVD94",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"teste\",\n  \"email\": \"teste\",\n  \"phone\": \"teste\",\n  \"address\": \"teste\",\n  \"cpf\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3334/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3334",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4YWQ3NTllLTViOTUtNDlmMS1iYTEwLTNmNDdjOWYxOGVkNyIsImlhdCI6MTY3MjI0MjcxMSwiZXhwIjoxNjcyODQ3NTExfQ.-uIBsQlgiGEHBlrLk1l4Ow4RafnHXmdOli_ElKTVD94",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"teste\",\n  \"email\": \"teste\",\n  \"phone\": \"teste\",\n  \"address\": \"teste\",\n  \"cpf\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3334/customer/63ad9e0138cbb9c627863aa0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3334",
+					"path": [
+						"customer",
+						"63ad9e0138cbb9c627863aa0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4YWQ3NTllLTViOTUtNDlmMS1iYTEwLTNmNDdjOWYxOGVkNyIsImlhdCI6MTY3MjI0MjcxMSwiZXhwIjoxNjcyODQ3NTExfQ.-uIBsQlgiGEHBlrLk1l4Ow4RafnHXmdOli_ElKTVD94",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"teste\",\n    \"email\": \"teste@none.com\",\n    \"phone\": \"teste\",\n    \"address\": {\n            \"street\": \"teste\",\n            \"number\": 100,\n            \"complement\": \"teste\",\n            \"city\": \"teste\",\n            \"state\": \"teste\",\n            \"zipCode\": \"teste\"\n    },\n    \"cpf\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3334/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3334",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4YWQ3NTllLTViOTUtNDlmMS1iYTEwLTNmNDdjOWYxOGVkNyIsImlhdCI6MTY3MjI0MjcxMSwiZXhwIjoxNjcyODQ3NTExfQ.-uIBsQlgiGEHBlrLk1l4Ow4RafnHXmdOli_ElKTVD94",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"teste\",\n    \"email\": \"teste@none.com\",\n    \"phone\": \"teste\",\n    \"address\": {\n            \"street\": \"teste\",\n            \"number\": 300,\n            \"complement\": \"teste\",\n            \"city\": \"teste\",\n            \"state\": \"teste\",\n            \"zipCode\": \"teste\"\n    },\n    \"cpf\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3334/customer/63ad9e0138cbb9c627863aa0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3334",
+					"path": [
+						"customer",
+						"63ad9e0138cbb9c627863aa0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4YWQ3NTllLTViOTUtNDlmMS1iYTEwLTNmNDdjOWYxOGVkNyIsImlhdCI6MTY3MjI0MjcxMSwiZXhwIjoxNjcyODQ3NTExfQ.-uIBsQlgiGEHBlrLk1l4Ow4RafnHXmdOli_ElKTVD94",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"teste\",\n  \"email\": \"teste\",\n  \"phone\": \"teste\",\n  \"address\": \"teste\",\n  \"cpf\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3334/customer/63ac67af48fd56d89a4fd82d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3334",
+					"path": [
+						"customer",
+						"63ac67af48fd56d89a4fd82d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
