@@ -13,9 +13,9 @@ function Home() {
     axios.get(`https://randomuser.me/api/?results=25&page=${currentPage}`)
       .then((response) => {
         setUserData(response.data.results);
-      }).catch((error) => {
-        setLoading(true);
-      }).finally(() => {
+      })
+      .catch(console.error)
+      .finally(() => {
         setLoading(false);
       })
   }
@@ -23,10 +23,10 @@ function Home() {
   useEffect(onClickHandler, [currentPage]);
 
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="caption table">
+    <TableContainer component={Paper} >
+      <Table sx={{ maxHeigth: 200 }} aria-label="caption table">
         <TableBody>
-          {userData.map((user) => (
+          {userData.slice(0,5).map((user) => (
             <TableRow key={user.name.first}>
               <TableCell component="th" scope="row">
                 <Avatar

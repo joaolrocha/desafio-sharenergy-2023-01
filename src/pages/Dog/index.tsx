@@ -27,7 +27,7 @@ function DogPage() {
   }
 
   return (
-    <div className="dog-container">
+    <div className="dog-containter">
       <Button onClick={onClickHandler} variant="contained">Buscar Cachorro</Button>
       {loading ? <p>Carregando...</p> : null}
       {!loading && data?.url ? <img id={data.url} src={data.url} alt="dog" /> : null}
